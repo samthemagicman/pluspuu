@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pluspuu Homes</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1773cf",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111921",
+              "text-main": "#111418",
+              "text-secondary": "#637588",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      .fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="font-display bg-white dark:bg-background-dark text-text-main dark:text-white transition-colors duration-200"
+  >
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <header
+        id="main-header"
+        class="absolute bg-gradient-to-b from-black/30 to-transparent top-0 left-1/2 -translate-x-1/2 w-full z-50 px-6 py-6 lg:px-6 transition-all duration-300"
+      >
+        <div class="max-w-[1600px] mx-auto flex items-center justify-between">
+          <div class="flex items-center gap-3 text-white">
+            <span class="material-symbols-outlined text-3xl drop-shadow-md"
+              >cabin</span
+            >
+            <h2 class="text-xl font-bold tracking-tight drop-shadow-md">
+              Pluspuu
+            </h2>
+          </div>
+          <div class="hidden md:flex items-center gap-10">
+            <nav class="flex items-center gap-8">
+              <a
+                class="text-sm font-bold text-white/90 hover:text-white transition-colors drop-shadow-sm"
+                href="#"
+                >Our Process</a
+              >
+              <a
+                class="text-sm font-bold text-white/90 hover:text-white transition-colors drop-shadow-sm"
+                href="#"
+                >Our Work</a
+              >
+              <a
+                class="text-sm font-bold text-white/90 hover:text-white transition-colors drop-shadow-sm"
+                href="#"
+                >About Us</a
+              >
+              <a
+                class="text-sm font-bold text-white/90 hover:text-white transition-colors drop-shadow-sm"
+                href="#"
+                >Sustainability</a
+              >
+            </nav>
+            <button
+              class="bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/20 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300"
+            >
+              Get in Touch
+            </button>
+          </div>
+          <div class="md:hidden text-white">
+            <span
+              class="material-symbols-outlined text-3xl cursor-pointer drop-shadow-md"
+              >menu</span
+            >
+          </div>
+        </div>
+      </header>
+      <section class="relative w-full h-screen min-h-[700px] flex items-center">
+        <div
+          class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+          style="background-image: url('./main.png')"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent z-0"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-0"
+        ></div>
+        <div
+          class="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20 pt-20"
+        >
+          <div class="max-w-2xl flex flex-col gap-6 fade-in-up">
+            <h1
+              class="text-white text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight drop-shadow-lg"
+            >
+              The Modern<br />
+              Sanctuary.
+            </h1>
+            <p
+              class="text-white/90 text-xl md:text-2xl font-light leading-relaxed max-w-lg drop-shadow-md mt-2"
+            >
+              More than a home—a living legacy of well-being, resilience, and
+              authentic self-expression. Modern Scandinavian design, built to
+              restore.
+            </p>
+            <div class="flex flex-wrap gap-4 mt-8 items-center">
+              <a
+                href="#models"
+                class="bg-white text-black hover:bg-gray-100 px-8 py-4 rounded-full text-base font-bold transition-all shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                Explore Models
+              </a>
+              <!-- <button
+                class="flex items-center gap-2 text-white hover:text-white/80 px-6 py-4 rounded-full text-base font-medium transition-colors group"
+              >
+                <span
+                  class="border border-white/50 rounded-full px-3 group-hover:bg-white/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >play_arrow</span
+                  >
+                </span>
+                Watch the Film
+              </button> -->
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce"
+        >
+          <span class="material-symbols-outlined text-4xl"
+            >keyboard_arrow_down</span
+          >
+        </div>
+      </section>
+      <section id="models" class="pb-24 pt-40 bg-white dark:bg-background-dark">
+        <div class="max-w-[900px] mx-auto px-6 text-center">
+          <span
+            class="text-primary font-bold tracking-widest uppercase text-xs mb-4 block"
+            >The Collection</span
+          >
+          <h2
+            class="text-text-main dark:text-white text-4xl md:text-5xl font-bold leading-tight mb-6 tracking-tight"
+          >
+            Built for Generations.
+          </h2>
+          <p
+            class="text-text-secondary dark:text-gray-400 text-xl font-light leading-relaxed"
+          >
+            Each Pluspuu home is a bespoke sanctuary—designed to actively
+            restore, protect, and inspire. Explore spaces where modern elegance
+            meets the science of serenity.
+          </p>
+        </div>
+      </section>
+      <section class="pb-40 bg-white dark:bg-background-dark">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+            <div class="group flex flex-col gap-5 cursor-pointer">
+              <div
+                class="w-full aspect-[16/10] bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden relative shadow-md hover:shadow-2xl transition-all duration-500"
+              >
+                <div
+                  class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  style="background-image: url('./huron.png')"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+              </div>
+              <div class="px-1">
+                <div class="flex justify-between items-baseline mb-3">
+                  <h3
+                    class="text-text-main dark:text-white text-2xl md:text-3xl font-bold tracking-tight"
+                  >
+                    Villa Huron
+                  </h3>
+                  <span class="text-primary font-semibold text-sm tracking-wide"
+                    >2570 sq ft</span
+                  >
+                </div>
+                <p
+                  class="text-text-secondary dark:text-gray-400 text-base md:text-lg leading-relaxed"
+                >
+                  A breathtaking custom designed model named the "Kallio" was
+                  created as a holiday home for a family of four, nestled on the
+                  coastal shores of Lake Huron!
+                </p>
+              </div>
+            </div>
+            <div class="group flex flex-col gap-5 cursor-pointer">
+              <div
+                class="w-full aspect-[16/10] bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden relative shadow-md hover:shadow-2xl transition-all duration-500"
+              >
+                <div
+                  class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  style="background-image: url('./VILLA_KAWAGAMA.jpg')"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+              </div>
+              <div class="px-1">
+                <div class="flex justify-between items-baseline mb-3">
+                  <h3
+                    class="text-text-main dark:text-white text-2xl md:text-3xl font-bold tracking-tight"
+                  >
+                    Villa Kawagama
+                  </h3>
+                  <span class="text-primary font-semibold text-sm tracking-wide"
+                    >973 sq ft</span
+                  >
+                </div>
+                <p
+                  class="text-text-secondary dark:text-gray-400 text-base md:text-lg leading-relaxed"
+                >
+                  A cozy 3- season cottage designed for a young, growing family,
+                  located in Dorset, ON, on a private island on Lake Kawagama!
+                </p>
+              </div>
+            </div>
+            <div class="group flex flex-col gap-5 cursor-pointer">
+              <div
+                class="w-full aspect-[16/10] bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden relative shadow-md hover:shadow-2xl transition-all duration-500"
+              >
+                <div
+                  class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  style="background-image: url('villa_shelburne.png')"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+              </div>
+              <div class="px-1">
+                <div class="flex justify-between items-baseline mb-3">
+                  <h3
+                    class="text-text-main dark:text-white text-2xl md:text-3xl font-bold tracking-tight"
+                  >
+                    Villa Shelburne
+                  </h3>
+                  <span class="text-primary font-semibold text-sm tracking-wide"
+                    >1,300 sq ft</span
+                  >
+                </div>
+                <p
+                  class="text-text-secondary dark:text-gray-400 text-base md:text-lg leading-relaxed"
+                >
+                  Inspired by the coastal shores of Nova Scotia's historic town
+                  of Shelburne, the Massey's had always envisioned constructing
+                  a rental property on Canada's east coast!
+                </p>
+              </div>
+            </div>
+            <div class="group flex flex-col gap-5 cursor-pointer">
+              <div
+                class="w-full aspect-[16/10] bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden relative shadow-md hover:shadow-2xl transition-all duration-500"
+              >
+                <div
+                  class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  style="background-image: url('pictou.png')"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+              </div>
+              <div class="px-1">
+                <div class="flex justify-between items-baseline mb-3">
+                  <h3
+                    class="text-text-main dark:text-white text-2xl md:text-3xl font-bold tracking-tight"
+                  >
+                    Villa Pictou
+                  </h3>
+                  <span class="text-primary font-semibold text-sm tracking-wide"
+                    >1624 sq ft</span
+                  >
+                </div>
+                <p
+                  class="text-text-secondary dark:text-gray-400 text-base md:text-lg leading-relaxed"
+                >
+                  A custom designed Kustavi constructed on the shores of the
+                  Atlantic Ocean! Designed as a costal summer cottage and a
+                  legacy property for the next generation to enjoy!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center mt-20">
+            <button
+              class="text-text-main dark:text-white border-b-2 border-primary hover:border-black dark:hover:border-white pb-1 transition-colors text-lg font-medium flex items-center gap-2"
+            >
+              View Our Work
+              <span class="material-symbols-outlined text-sm"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 bg-background-light dark:bg-gray-900/50">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+          <div class="text-center mb-16">
+            <span
+              class="text-primary font-bold tracking-widest uppercase text-xs mb-4 block"
+              >The Pluspuu Promise</span
+            >
+            <h2
+              class="text-text-main dark:text-white text-3xl font-bold mb-4 tracking-tight"
+            >
+              Future-Proof Living
+            </h2>
+            <p
+              class="text-text-secondary dark:text-gray-400 text-lg font-light leading-relaxed max-w-2xl mx-auto"
+            >
+              Where biophilic design meets lasting resilience—homes that
+              actively support your well-being and stand strong for generations.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="flex flex-col items-center text-center gap-6">
+              <div
+                class="size-20 rounded-2xl bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center text-primary mb-2"
+              >
+                <span class="material-symbols-outlined text-4xl">spa</span>
+              </div>
+              <h3 class="text-text-main dark:text-white text-xl font-bold">
+                Personal Restoration
+              </h3>
+              <p
+                class="text-text-secondary dark:text-gray-400 leading-relaxed max-w-sm"
+              >
+                The biophilic properties of Finnish solid wood are proven to
+                reduce stress and improve focus—your home becomes a sanctuary
+                for mental and physical well-being.
+              </p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-6">
+              <div
+                class="size-20 rounded-2xl bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center text-primary mb-2"
+              >
+                <span class="material-symbols-outlined text-4xl">shield</span>
+              </div>
+              <h3 class="text-text-main dark:text-white text-xl font-bold">
+                Lasting Resilience
+              </h3>
+              <p
+                class="text-text-secondary dark:text-gray-400 leading-relaxed max-w-sm"
+              >
+                Energy-efficient construction that provides long-term financial
+                security while standing strong against the effects of a changing
+                climate.
+              </p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-6">
+              <div
+                class="size-20 rounded-2xl bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center text-primary mb-2"
+              >
+                <span class="material-symbols-outlined text-4xl">diamond</span>
+              </div>
+              <h3 class="text-text-main dark:text-white text-xl font-bold">
+                Simplified Luxury
+              </h3>
+              <p
+                class="text-text-secondary dark:text-gray-400 leading-relaxed max-w-sm"
+              >
+                A seamless, expert-led journey from concept to completion—peace
+                of mind without the hassle of traditional building or real
+                estate markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 md:py-32 bg-white dark:bg-background-dark">
+        <div
+          class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+        >
+          <div class="order-2 lg:order-1 flex flex-col gap-8">
+            <div
+              class="inline-flex items-center gap-2 text-primary font-bold text-xs tracking-[0.2em] uppercase"
+            >
+              <span class="w-12 h-[1px] bg-primary"></span>
+              Our Philosophy
+            </div>
+            <h2
+              class="text-text-main dark:text-white text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight"
+            >
+              Like a Bird<br />Builds Its Nest
+            </h2>
+            <div
+              class="space-y-6 text-lg text-text-secondary dark:text-gray-400 leading-relaxed font-light"
+            >
+              <p>
+                Our philosophy is simple: a humble, unnoticeable nest from which
+                one can see everything. Not a grand monument to be admired, but
+                a quiet, functional haven—a secure retreat from which to observe
+                the world.
+              </p>
+              <p>
+                This is not the rustic cabin of the past. It is a modern
+                redefinition of the wooden home: clean lines, light interiors,
+                and a clear design language that celebrates both function and
+                serenity.
+              </p>
+            </div>
+            <div class="pt-6">
+              <a
+                class="inline-flex items-center gap-3 text-text-main dark:text-white font-bold border-b border-gray-300 dark:border-gray-700 pb-1 hover:border-primary transition-all"
+                href="#"
+              >
+                Read Our Story
+                <span class="material-symbols-outlined text-sm"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2 relative h-[600px] w-full">
+            <div
+              class="w-full h-full rounded-2xl overflow-hidden relative shadow-2xl"
+            >
+              <div
+                class="absolute inset-0 bg-cover bg-center"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDw85WDdLb8XoFvExqlXQVBCPp168ChCfgJaHcCCGHpolA_-vRDptFPURVd7s526cgnM9FNw1fOqtjL0WdX0ZxEZAD6ymHOJhOdHOYrnA1NtPCe4Sy9zjGXWgD9VxGGGVsPHbZxrXZkLpFcQIRl-UDCxaeaIfI1p_QGhCnoG1Gwy_ylQKUx0Oq3O1Vex0N28n_47YBjT6vWv6ZjIbBrBjYxzXe00M5ypA5oMyVMLIAoXR9GVbubv19mJzbZq32sNkI2NJ4W_w_s8CTB');
+                "
+              ></div>
+            </div>
+            <div
+              class="absolute -bottom-10 -left-10 w-2/3 h-2/3 bg-background-light dark:bg-gray-800 -z-10 rounded-2xl"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-24 md:py-32 bg-background-dark text-white relative overflow-hidden"
+      >
+        <div class="max-w-[800px] mx-auto px-6 text-center relative z-10">
+          <h2 class="text-4xl md:text-6xl font-bold mb-8 tracking-tight">
+            Your Living Legacy Awaits
+          </h2>
+          <p
+            class="text-gray-400 text-lg md:text-xl mb-12 leading-relaxed font-light"
+          >
+            Begin your transformation from a conventional house to a restorative
+            sanctuary. Download our catalog or schedule a personal consultation
+            to start your journey.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6 w-full justify-center">
+            <button
+              class="bg-white text-black hover:bg-gray-200 transition-colors px-10 py-4 rounded-full font-bold text-base shadow-lg flex items-center justify-center gap-2"
+            >
+              <span class="material-symbols-outlined">download</span>
+              Download Catalog
+            </button>
+            <button
+              class="bg-transparent hover:bg-white/10 transition-colors px-10 py-4 rounded-full font-bold text-base text-white flex items-center justify-center gap-2"
+            >
+              <span class="material-symbols-outlined">calendar_month</span>
+              Book Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+      <footer
+        class="bg-white dark:bg-background-dark pt-20 pb-10 border-t border-gray-100 dark:border-gray-800"
+      >
+        <div class="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16"
+          >
+            <div class="lg:col-span-2 flex flex-col gap-6 pr-8">
+              <div
+                class="flex items-center gap-2 text-text-main dark:text-white"
+              >
+                <span class="material-symbols-outlined text-primary text-2xl"
+                  >cabin</span
+                >
+                <span class="font-bold text-lg tracking-tight">Pluspuu</span>
+              </div>
+              <p
+                class="text-text-secondary dark:text-gray-500 text-sm leading-relaxed max-w-sm"
+              >
+                Redefining luxury living for discerning Canadians. A new kind of
+                luxury—one defined by personal restoration, long-term
+                resilience, and authentic expression.
+              </p>
+              <div class="flex gap-4 mt-2">
+                <a
+                  class="text-text-secondary dark:text-gray-400 hover:text-primary transition-colors"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined">photo_camera</span>
+                </a>
+                <a
+                  class="text-text-secondary dark:text-gray-400 hover:text-primary transition-colors"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined">public</span>
+                </a>
+                <a
+                  class="text-text-secondary dark:text-gray-400 hover:text-primary transition-colors"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined">alternate_email</span>
+                </a>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h4
+                class="text-text-main dark:text-white font-bold text-sm uppercase tracking-wider"
+              >
+                Discover
+              </h4>
+              <a
+                class="text-text-secondary dark:text-gray-400 hover:text-primary text-sm"
+                href="#"
+                >Our Models</a
+              >
+              <a
+                class="text-text-secondary dark:text-gray-400 hover:text-primary text-sm"
+                href="#"
+                >Gallery</a
+              >
+              <a
+                class="text-text-secondary dark:text-gray-400 hover:text-primary text-sm"
+                href="#"
+                >Virtual Tours</a
+              >
+              <a
+                class="text-text-secondary dark:text-gray-400 hover:text-primary text-sm"
+                href="#"
+                >Pricing</a
+              >
+            </div>
+            <div class="flex flex-col gap-4">
+              <h4
+                class="text-text-main dark:text-white font-bold text-sm uppercase tracking-wider"
+              >
+                Company
+              </h4>
+              <a
+                class="text-text-secondary dark:text-gray-400 hover:text-primary text-sm"
+                href="#"
+                >Our Story</a
+              >
+              <a
+                class="text-text-secondary dark:text-gray-400 hover:text-primary text-sm"
+                href="#"
+                >Sustainability</a
+              >
+              <a
+                class="text-text-secondary dark:text-gray-400 hover:text-primary text-sm"
+                href="#"
+                >Careers</a
+              >
+              <a
+                class="text-text-secondary dark:text-gray-400 hover:text-primary text-sm"
+                href="#"
+                >Contact</a
+              >
+            </div>
+            <div class="flex flex-col gap-4">
+              <h4
+                class="text-text-main dark:text-white font-bold text-sm uppercase tracking-wider"
+              >
+                Stay Updated
+              </h4>
+              <p class="text-text-secondary dark:text-gray-400 text-xs">
+                Latest designs and offers directly to your inbox.
+              </p>
+              <div class="flex gap-2">
+                <input
+                  class="bg-background-light dark:bg-gray-800 border-none rounded-lg px-4 py-3 text-sm w-full focus:ring-2 focus:ring-primary outline-none dark:text-white"
+                  placeholder="Email address"
+                  type="email"
+                />
+                <button
+                  class="bg-primary hover:bg-blue-700 text-white rounded-lg px-4 py-2 text-sm font-bold transition-colors"
+                >
+                  <span class="material-symbols-outlined text-sm">send</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-text-secondary dark:text-gray-500 text-xs">
+              © 2023 Pluspuu. All rights reserved.
+            </p>
+            <div class="flex gap-6">
+              <a
+                class="text-text-secondary dark:text-gray-500 hover:text-text-main dark:hover:text-white text-xs"
+                href="#"
+                >Privacy Policy</a
+              >
+              <a
+                class="text-text-secondary dark:text-gray-500 hover:text-text-main dark:hover:text-white text-xs"
+                href="#"
+                >Terms of Service</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const header = document.getElementById("main-header");
+
+      // Classes for the initial state
+      // Removed "left-0" as we are now using "left-1/2 -translate-x-1/2" permanently
+      const initialClasses = [
+        "absolute",
+        "top-0",
+        "w-full",
+        "py-6",
+        "bg-transparent",
+      ];
+
+      // Classes for the scrolled state (floating pill)
+      // Removed "left-1/2", "-translate-x-1/2" as they are now permanent
+      const scrolledClasses = [
+        "fixed",
+        "top-4",
+        "w-[90%]",
+        "max-w-[1400px]",
+        "bg-background-dark/80",
+        "backdrop-blur-md",
+        "shadow-lg",
+        "rounded-full",
+        "py-4",
+      ];
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 150) {
+          // Add scrolled classes, remove initial positioning classes
+          header.classList.add(...scrolledClasses);
+          header.classList.remove(...initialClasses);
+        } else {
+          // Revert to initial state
+          header.classList.remove(...scrolledClasses);
+          header.classList.add(...initialClasses);
+        }
+      });
+    </script>
+  </body>
+</html>
