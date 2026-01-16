@@ -510,6 +510,171 @@
           </div>
         </div>
       </section>
+
+      <!-- Contact Us Section -->
+      <section
+        id="contact"
+        class="py-24 md:py-32 bg-white dark:bg-background-dark"
+      >
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+            <!-- Left Column - Contact Info -->
+            <div class="flex flex-col gap-8">
+              <div
+                class="inline-flex items-center gap-2 text-primary font-bold text-xs tracking-[0.2em] uppercase"
+              >
+                <span class="w-12 h-[1px] bg-primary"></span>
+                Get in Touch
+              </div>
+              <h2
+                class="text-text-main dark:text-white text-4xl md:text-5xl font-light leading-[1.1] tracking-tight"
+              >
+                Let's Build Your<br />Dream Sanctuary
+              </h2>
+              <p
+                class="text-text-secondary dark:text-gray-400 text-lg font-light leading-relaxed max-w-md"
+              >
+                Ready to start your journey toward a restorative home? Our team
+                is here to guide you through every step of the process.
+              </p>
+
+              <div class="flex flex-col gap-6 mt-4">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="size-14 rounded-2xl bg-background-light dark:bg-gray-800 flex items-center justify-center text-primary shadow-sm"
+                  >
+                    <span class="material-symbols-outlined text-2xl">call</span>
+                  </div>
+                  <div>
+                    <h4 class="text-text-main dark:text-white font-semibold">
+                      Call Us
+                    </h4>
+                    <p class="text-text-secondary dark:text-gray-400 text-sm">
+                      +1 (416) 555-0123
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="size-14 rounded-2xl bg-background-light dark:bg-gray-800 flex items-center justify-center text-primary shadow-sm"
+                  >
+                    <span class="material-symbols-outlined text-2xl">mail</span>
+                  </div>
+                  <div>
+                    <h4 class="text-text-main dark:text-white font-semibold">
+                      Email Us
+                    </h4>
+                    <p class="text-text-secondary dark:text-gray-400 text-sm">
+                      hello@pluspuu.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column - Contact Form -->
+            <div class="relative">
+              <div
+                class="bg-background-light dark:bg-gray-800/50 rounded-3xl p-8 md:p-10 border border-gray-100 dark:border-gray-700/50"
+              >
+                <h3
+                  class="text-text-main dark:text-white text-2xl font-semibold mb-6"
+                >
+                  Send Us a Message
+                </h3>
+                <form class="flex flex-col gap-5">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="flex flex-col gap-2">
+                      <label
+                        class="text-text-main dark:text-white text-sm font-medium"
+                        for="firstName"
+                        >First Name</label
+                      >
+                      <input
+                        type="text"
+                        id="firstName"
+                        class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3.5 text-sm text-text-main dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300"
+                        placeholder="John"
+                      />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <label
+                        class="text-text-main dark:text-white text-sm font-medium"
+                        for="lastName"
+                        >Last Name</label
+                      >
+                      <input
+                        type="text"
+                        id="lastName"
+                        class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3.5 text-sm text-text-main dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300"
+                        placeholder="Doe"
+                      />
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="text-text-main dark:text-white text-sm font-medium"
+                      for="email"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3.5 text-sm text-text-main dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="text-text-main dark:text-white text-sm font-medium"
+                      for="interest"
+                      >Area of Interest</label
+                    >
+                    <select
+                      id="interest"
+                      class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3.5 text-sm text-text-main dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300 appearance-none cursor-pointer"
+                    >
+                      <option value="">Select an option</option>
+                      <option value="new-home">Building a New Home</option>
+                      <option value="cottage">Vacation Cottage</option>
+                      <option value="investment">Investment Property</option>
+                      <option value="consultation">General Consultation</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="text-text-main dark:text-white text-sm font-medium"
+                      for="message"
+                      >Your Message</label
+                    >
+                    <textarea
+                      id="message"
+                      rows="4"
+                      class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3.5 text-sm text-text-main dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300 resize-none"
+                      placeholder="Tell us about your dream home..."
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="mt-2 bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-full text-base font-bold transition-all duration-300 shadow-md hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2"
+                  >
+                    <span>Send Message</span>
+                    <span class="material-symbols-outlined text-lg"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </form>
+              </div>
+              <!-- Decorative element -->
+              <div
+                class="absolute -bottom-6 -right-6 w-1/2 h-1/2 bg-primary/5 dark:bg-primary/10 -z-10 rounded-3xl"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer
         class="bg-white dark:bg-background-dark pt-20 pb-10 border-t border-gray-100 dark:border-gray-800"
       >
